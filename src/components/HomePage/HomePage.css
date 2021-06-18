@@ -1,0 +1,20 @@
+.homepage_container {
+  margin: 0 20%;
+}
+
+.content_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4vh;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: left;
+  margin: 1vh 3vh;
+}
+
+.content_container > article {
+  text-align: left;
+}

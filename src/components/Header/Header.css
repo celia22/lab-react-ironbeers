@@ -1,0 +1,11 @@
+.header {
+  height: 7vh;
+  background-color: rgb(47, 166, 240);
+}
+
+.header > span {
+  margin: 3vh 47%;
+  color: white;
+  width: 2rem;
+  height: 3rem;
+}
