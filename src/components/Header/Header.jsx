@@ -9,7 +9,7 @@ const element = <FontAwesomeIcon icon={faHome} />
 const Header = () => {
   return(
     <div className="header">
-      <span>{element}</span>
+      <a className="icon" href="/">{element}</a>
     </div>
   )
 }

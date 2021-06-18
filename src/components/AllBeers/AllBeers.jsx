@@ -9,7 +9,7 @@ class AllBeers extends Component {
     super(props);
     this.state = {
         beers: [],
-        status: 'idle'
+        singleBeer: ""
     }
 }
 
@@ -17,12 +17,23 @@ componentDidMount() {
   axios.get("https://ih-beers-api2.herokuapp.com/beers")
   .then(response => {
       this.setState({beers: response.data})
-      console.log(this.state.beers)
   })
+}
+
+chooseSingleBeer = () => {
+  this.setState = {
+    singleBeer: this.beers.item
+  }
 }
 
   render(){
     const {beers} = this.state
+
+    if (!beers) {
+      return(
+          <h1>loading...</h1>
+      )
+  }
     return(
       <>
       < Header />

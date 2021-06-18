@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import HomePage from './components/HomePage/HomePage';
 import AllBeers from './components/AllBeers/AllBeers';
+import SingleBeer from './components/SingleBeer/SingleBeer';
 
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
       <>
         <Router>
           <Switch>
+            <Route exact path="/beers/:beerId" component={SingleBeer} />
             <Route path="/beers">
               <AllBeers />
             </Route>
