@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './components/HomePage/HomePage';
 import AllBeers from './components/AllBeers/AllBeers';
 import SingleBeer from './components/SingleBeer/SingleBeer';
+import RandomBeer from './components/RandomBeer/RandomBeer';
 
 import './App.css';
 
@@ -17,17 +18,16 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <Router>
-          <Switch>
-            <Route exact path="/beers/:beerId" component={SingleBeer} />
-            <Route path="/beers">
-              <AllBeers />
-            </Route>
-            <Route path="/" component={HomePage} />
-          </Switch>
-        </Router>
-      </>
+      <Router>
+        <Switch>
+          <Route exact path="/beers/:id" component={SingleBeer} />
+          <Route path="/random-beer" component={RandomBeer} />
+          <Route path="/beers">
+            <AllBeers />
+          </Route>
+          <Route path="/" component={HomePage} />
+        </Switch>
+      </Router>
     );
   }
 }

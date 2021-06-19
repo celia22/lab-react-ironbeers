@@ -1,0 +1,20 @@
+.beer_item {
+  margin: 5vh 33%;
+  width: 30%;
+}
+
+.beer_item > img {
+  margin: 0 40%;
+}
+
+.title {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.subtitle {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}

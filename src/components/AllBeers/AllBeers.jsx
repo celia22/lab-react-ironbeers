@@ -29,9 +29,9 @@ chooseSingleBeer = () => {
   render(){
     const {beers} = this.state
 
-    if (!beers) {
+      if (!this.state.beers) {
       return(
-          <h1>loading...</h1>
+          <p>loading...</p>
       )
   }
     return(
