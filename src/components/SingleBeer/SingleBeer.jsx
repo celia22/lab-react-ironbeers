@@ -29,8 +29,8 @@ this.state = {
       <>
       <Header />
 
-      <div className="beer_item">
-        <img src={singleBeer.image_url} alt="beer" />
+      <div className="beer_item_single">
+        <img className="beer_item_single" src={singleBeer.image_url} alt="beer" />
         <div className="title">
           <h2> {singleBeer.name}</h2>
           <p><strong>{singleBeer.attenuation_level}</strong></p>

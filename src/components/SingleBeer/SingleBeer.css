@@ -1,10 +1,11 @@
-.beer_item {
+.beer_item_single {
   margin: 5vh 33%;
   width: 30%;
 }
 
-.beer_item > img {
+.beer_item_single > img {
   margin: 0 40%;
+  width: 20%;
 }
 
 .title {

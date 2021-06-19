@@ -30,7 +30,7 @@ class RandomBeer extends Component {
         <>
         <Header />
   
-        <div className="beer_item">
+        <div className="beer_item_single">
           <img src={randomBeer.image_url} alt="beer" />
           <div className="title">
             <h2> {randomBeer.name}</h2>

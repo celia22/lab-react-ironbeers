@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 
-const element = <FontAwesomeIcon size={48} icon={faHome} />
+const element = <FontAwesomeIcon  icon={faHome} size= "2x"/>
 
 const Header = () => {
   return(
