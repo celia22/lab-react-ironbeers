@@ -1,11 +1,9 @@
 .header {
-  height: 7vh;
+  height: 8vh;
   background-color: rgb(47, 166, 240);
 }
 
 .icon {
-  margin: 3vh 47% 0;
+  margin: 2vh 47% 0;
   color: white;
-  width: 2rem;
-  height: 3rem;
 }

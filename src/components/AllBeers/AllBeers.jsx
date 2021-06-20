@@ -9,35 +9,56 @@ class AllBeers extends Component {
     super(props);
     this.state = {
         beers: [],
-        singleBeer: ""
+        status: "loading",
+        query: ""
     }
 }
 
 componentDidMount() {
   axios.get("https://ih-beers-api2.herokuapp.com/beers")
   .then(response => {
-      this.setState({beers: response.data})
+      this.setState({
+        beers: response.data,
+        status: "loaded"
+      })
   })
 }
 
-chooseSingleBeer = () => {
-  this.setState = {
-    singleBeer: this.beers.item
-  }
+handleQuery = (query) => {
+
+  axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+  .then((response) => {
+      this.setState({
+          beers: response.data,
+      })
+  })
+  .catch((error) => {
+      console.log('error', error)
+  })
+}
+
+
+
+handleChange = (x) => {
+this.setState({ query: x.target.value });  
+this.props.search(x.target.value)
 }
 
   render(){
+   
     const {beers} = this.state
 
-      if (!this.state.beers) {
-      return(
-          <p>loading...</p>
-      )
-  }
+    // if (beers.status !== "loaded" ) {
+    //   return(
+    //       <p>loading...</p>
+    //   )
+    // }
+
     return(
       <>
       < Header />
-      <div className="beers_container">
+      <input className="search_bar" type="text" label="search" placeholder="Search your beer..." value={this.state.query} onChange={this.handleChange}/>
+      <div className="beers_container">       
         {beers.map((item,index) => {
           return(
             <div className="beer_item" key={index}>

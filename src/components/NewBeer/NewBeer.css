@@ -1,0 +1,35 @@
+.new_beer_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin: 10vh 30% 10vh 35%;
+}
+
+.new_beer_form > label {
+  font-size: 0.8rem;
+}
+
+.new_beer_form > input {
+  margin: 1vh;
+  height: 3vh;
+  -webkit-border-radius: 56px;
+  -moz-border-radius: 56px;
+  border-radius: 56px;
+  border: 1px solid rgb(180, 177, 177);
+}
+
+.new_beer_description {
+  height: 4rem;
+}
+
+.submit_button {
+  margin: 1vh;
+  height: 2rem;
+  -webkit-border-radius: 56px;
+  -moz-border-radius: 56px;
+  border-radius: 56px;
+  border: none;
+  color: white;
+  background-color: rgb(47, 166, 240);
+}
